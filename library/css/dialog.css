@@ -1,0 +1,49 @@
+.dialogBox {
+    position: fixed;
+}
+.dialogContent {
+    width: 95%;
+}
+.dialogMenu {
+    height: 0px;
+}
+.dialogBox > div:first-child > div:first-child {
+    padding-right: 3px;
+}
+.boxShow {
+    display: block;
+}
+.boxHidden {
+    visibility: hidden;
+}
+.boxVisible {
+    visibility: hidden;
+}
+.boxHide {
+    z-index: unset !important;
+    display: none;    
+}
+
+#dialogMinimizeArea {
+    position: fixed;
+    bottom: 20px;
+    height: 0px;
+}
+
+@media screen AND (min-width: 360px ) {
+    .dialogBox {
+        width: 320px;
+    }
+}
+@media screen AND (min-width: 480px ) {
+    .dialogBox {
+        width: 380px;
+    }
+    .dialogBox > div:first-child {
+        height: 35px;
+    } 
+}
+#roles  a {
+    display: block;
+    font-size: 1em;
+}

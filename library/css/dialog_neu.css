@@ -1,0 +1,187 @@
+/*css*/
+.dW, .dB {
+    position: absolute;
+}
+.dB {
+    background-color: white;
+    border: 2px #0c97e2 solid;
+    border-radius: 2px;
+    z-index: 20;
+}
+.dB iframe{
+    border: none;
+    width: 95%;
+}
+
+.dC {
+    margin: 0.5em;
+    overflow-y: auto;
+}
+.dHL {
+    display: flex;
+    align-items: center;
+    height: 20px;
+}
+.dHLTi {
+    flex: 1;
+    cursor: move;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-left: 0.5em;
+    margin-right: 0.2em;
+    font-weight: bold;
+}
+.dHLCrtl {
+    width: 20px;
+    height: 20px;
+    background-position: center center;
+    background-size: contain;
+    cursor: pointer;
+}
+.dResizer {
+    position: relative;
+    width: 10px;
+    height: 10px;
+    background-image: url(../css/icons/cResizer.png);
+    background-size: contain;
+    cursor: se-resize;
+}
+.ctrlInfo {
+    background-image: url( ../icons/icon_info.png );
+    background-repeat: no-repeat;
+}
+.ctrlHelp {
+    background-image: url(../icons/icon_help.png);
+    background-repeat: no-repeat;
+}
+.ctrlMin {
+    background-image: url(../icons/icon_minimize.png);
+    
+}
+.ctrlMax {
+    background-image: url(../icons/icon_maxim_1.png);
+    
+}
+.ctrlClose {
+    background-image: url(../icons/icon_close.png);
+    
+}
+.ctrlSticky {
+    background-image: url(../icons/icon_sticky.png);
+    
+}
+.dM {
+    line-height: 3px;
+    height: 3px;
+    background: transparent linear-gradient(90deg, #E30613 0%, #E84E0F 15%, #FEC700 34%, #BCCF00 49%, #009FE3 65%, #007BC4 80%, #B14191 100%) 0% 0% no-repeat padding-box;
+}
+.dW {
+    left: 0;
+    top: 0;    
+}
+.wrapperNoModal {
+    height: 0px;
+}
+.wrapperModal {
+    height: calc(100vh - var(--scrollbar-height));
+    width: calc(100vw - var(--scrollbar-width));
+    opacity: 0.5;
+    background-color: silver;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.center {
+    left: calc( ( var(--window-width ) / 2 ) - ( var(--dialog-width ) / 2 ) );
+    top: calc( ( var(--window-height ) / 2 ) - ( var(--dialog-height ) / 2 ) );
+}
+.noCenter {
+    left: 0;
+    top: 0;
+}
+.dF {
+    align-items: center;
+    direction: rtl;
+    height: 40px;
+}
+
+.dF input[type=button] {
+    margin-right: 1em;
+}
+.mesBox {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin: 0.5em;
+    width: 80%;
+}
+.mesImg {
+    width:  60px;
+    margin-right: 10px;
+}
+.mesCon {
+    flex: 1;
+}
+@media screen and (min-width: 300px) {
+    .dB {
+        width: 280px;
+    }
+    .dC {
+    }
+    .maximizeB {
+        width: calc( var(--window-width ) - var(--dialog-border ) * 2 );
+        height: calc( var(--window-height ) - var(--dialog-border ) * 2 );
+        left: 0px;
+        top: 0px;
+    }
+    .maximizeHL {
+        width: calc( var(--window-width ) - var(--dialog-border ) * 2 - 16px );
+    }
+    .maximizeC {
+        width: 97%;
+        height: calc( var(--window-height ) - (var(--dialog-footer)) - (var(--dialog-title) ) - 20px );
+    }
+    .minimizeB {
+        position: fixed;
+    }
+}
+@media screen and (min-width: 320px) {
+    .dB {
+        width: 290px;
+    }
+    .dC {
+    }
+    .maximizeB {
+        width: calc( var(--window-width ) - var(--dialog-border ) * 2 );
+        height: calc( var(--window-height ) - var(--dialog-border ) * 2 );
+    }
+    .maximizeHL {
+        width: calc( var(--window-width ) - var(--dialog-border ) * 2 - 16px );
+    }
+}
+@media screen and (min-width: 360px) {
+    .dB {
+        width: 320px;
+    }
+    .dHL {
+        height: 40px;
+        font-size: 1.2em;
+    }
+    .dC {
+    /*width: 335px;*/
+    }
+    .maximizeB {
+        width: calc( var(--window-width ) - var(--dialog-border ) * 2 );
+        height: calc( var(--window-height ) - var(--dialog-border ) * 2 );
+    }
+    .maximizeHL {
+        width: calc( var(--window-width ) - var(--dialog-border ) * 2 - 16px );
+    }
+/*
+    .dF input[type=button] {
+        width: 80px;
+        font-size: 12px;
+        height: 25px;
+    }
+*/
+}

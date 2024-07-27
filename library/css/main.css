@@ -1,0 +1,86 @@
+/* CSS Document */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://fonts.googleapis.com/css?family=Bree+Serif);
+
+html { 
+  	box-sizing: border-box; 
+	padding: 0;
+	margin: 0;	
+} 
+/*
+*, ::before, ::after { 
+	box-sizing: inherit; 
+}
+*/
+body {
+	background-image: url(../pics/digitization-640.jpg);
+	/* Center and scale the image nicely */
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1em;
+	margin: 0 auto;
+}
+header, nav, figure, body > article, main, footer {
+	margin-left: auto;
+	margin-right: auto;
+}
+header {
+
+	/*width: 16em;*/
+    display: grid;
+    grid-template-columns: 50% 0 50%;
+    grid-template-rows: 4em 3em;
+    grid-column-gap: 0;
+    grid-row-gap: 1em;
+    justify-items: stretch;
+    align-items: stretch;
+
+}
+header input{
+	width: 6em;
+}
+
+header > div:first-child {
+    display: grid;
+	background-image:url(../pics/logo_easyit.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	cursor: pointer;
+}
+header > div:nth-child(2) {
+	display: none;
+}
+header > div:nth-child(2),header > div:nth-child(4) {
+	text-align: center;
+	font-weight: bold;
+	font-size: 1.6em;
+}
+header > div:nth-child(3) {
+	display: grid;
+	grid-column-start: 3;
+	justify-items: end;
+}
+header > div:nth-child(4) {
+    display: grid;
+	grid-column-start: 1;
+	grid-column-end: 4;
+	grid-row-start: 2;
+	grid-row-end: 3;
+}
+article {
+    background-color: whitesmoke;
+	border-radius:0.5em; 
+	border: 1px #0c97e2 solid;
+	margin-bottom: 1em;
+}
+article > h1 {
+	background: linear-gradient(top, #0c97e2 0%, #C6C6FF 50%, #0c97e2 100%); 
+	background: -webkit-linear-gradient(top,#0c97e2 0%, #C6C6FF 50%, #0c97e2 100%);
+	line-height: 2em; 
+	margin-top: 0; 
+	text-indent:0.5em;
+}article > p {
+	margin: 0.5em; 
+}
