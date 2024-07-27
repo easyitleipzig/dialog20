@@ -1,0 +1,9 @@
+@font-face {
+  font-family: "Univers";
+  src: url("fonts/UniversBold.woff2")
+      format("woff2"),
+    url("fonts/UniversBold.woff")
+      format("woff");
+  font-weight: normal;
+  font-style: normal;
+}

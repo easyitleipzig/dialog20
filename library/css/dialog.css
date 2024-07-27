@@ -1,9 +1,26 @@
 .dialogBox {
     position: fixed;
+    display: flex;
 }
 .dialogContent {
     width: 95%;
 }
+.dialogBox > div:first-child>div:nth-child(2) {
+    cursor: move;
+}
+/* ctrl area */
+.dialogBox > div:first-child {
+    display: flex;
+    cursor: move;
+}
+.dialogBox > div:first-child > div:nth-child(3) {
+    display: table;
+    cursor: pointer;
+}
+.dialogBox > div:first-child > div:nth-child(3) > div {
+    display: table-cell;
+}
+/* end ctrl area */
 .dialogMenu {
     height: 0px;
 }
@@ -28,6 +45,22 @@
     position: fixed;
     bottom: 20px;
     height: 0px;
+}
+/* headline buttons */
+.cbClose {
+    background-image: url(icons/cClose.png);
+}
+.cbHelp {
+    background-image: url(icons/cHelp.png);
+}
+.cbMax {
+    background-image: url(icons/cMax.png);
+}
+.cbMaximized {
+    background-image: url(icons/cMaximized.png);
+}
+.cbMinimize {
+    background-image: url(icons/cMinimize.png);
 }
 
 @media screen AND (min-width: 360px ) {

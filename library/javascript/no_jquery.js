@@ -445,6 +445,16 @@ var nj = function ( p ) {
         link.href = p + f;
         document.getElementsByTagName("head")[0].appendChild(link);        
     }
+    // checks if a document root property is set (eq "")
+    _cRP = function( prop ) {
+        let bodyStyles = window.getComputedStyle(document.body);
+        if( bodyStyles.getPropertyValue(prop) == "" ) {
+            return false
+            } else {
+                console.log( prop, bodyStyles.getPropertyValue(prop) );
+            return bodyStyles.getPropertyValue(prop)
+        }
+    }
     // sets document root properties
     _sDP = function( rootPraefix = "" ) {
         let width,
@@ -875,6 +885,7 @@ fetch(request)
     this.gRe = _gRe;
     this.lCS = _lCS;
     this.rCS = _rCS;
+    this.cRP = _cRP;
     this.sDP = _sDP;
     // dom
     this.rEl = _rEl;

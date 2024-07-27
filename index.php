@@ -13,6 +13,7 @@
 <meta name="robots" content="index, nofollow">
 <meta name="keywords" content="hochkonfigurierbarer JavaScript-Dialog">
 <title>Dialog easyIT-Leipzig</title>
+    <link rel="stylesheet prefetch" href="library/css/logo.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 <link rel="apple-touch-icon" href="favicon.png">
@@ -21,11 +22,17 @@ div>div:nth-child(2) {
     color: #005AAD;
 }
 #logoText, #logoDialog {
+    font-family: 'Univers';
     position: relative;
     width: 326px;
     font-weight: bold;
     left: 180px;
+}
+#logoText {
     top: -176px;
+}
+#logoDialog {
+    top: -160px;
 }
 #logoText1, #logoDialog1 {
     font-size: 60px;

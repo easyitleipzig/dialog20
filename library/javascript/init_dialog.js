@@ -4,13 +4,17 @@ const init = function( name ) {
     window[ name ] = new DialogDR({
     	dVar: "dDia", 
     	width: 280,
-    	addClassFiles: "DialogNew.css dialog_easyit.css"
+    	addClassFiles: "DialogNew.css dialog_easyit.css",
+        hasClose: true,
+        hasMin: true,
+        rootPropertyPraefix: 'dialog-'
     });
 	window[ 'dChin' ] = new DialogDR({
     	dVar: "dChin", 
     	width: 280,
     	title: '对话标题',
     	innerHTML: '这是一段对话。',
+        classPraefix: 'dChin_',
     	buttons: [
     			{
     				title: '好的',

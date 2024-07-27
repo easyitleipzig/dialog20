@@ -1,6 +1,5 @@
 //javascript
 //var oldY = 0, oldX = 0;
-let cDia;
 var TEST_INNER_HTML ="<p><input value='abcd'></p>"; 
 var setDialogPosOnScroll = function() {
     let els = nj().els( ".dialogBox:not(.boxHide)" );
@@ -20,31 +19,6 @@ var setDialogPosOnScroll = function() {
     }    
 }
 //registerOnResize( setDialogPosOnScroll );
-const getRootObject = function( el ) {
-    return window[ getDVar( el ).split(".")[0] ];
-}
-const getDialogVar = function( dVar ) {
-    let tmp = dVar.split( "." );
-    let m = tmp.length;
-    let j = 1;
-    let tmpVar = window[ tmp[0] ];
-    while( j < m ) {
-        tmpVar = tmpVar[tmp[j]];
-        j += 1;
-    }
-    return tmpVar;
-}
-const getDVar = function( el ) {
-    let x = 1;
-    while (x == 1 ) {
-        if( nj( el ).hAt( "data-dVar" ) ) {
-            x = 0;
-            return nj( el ).atr( "data-dVar" )
-        } else {
-            el = nj( el ).p();
-        }
-    }
-}
 /* end dialog helper */
 /* TODO: extract all not nessacary setup vars to intern vars */ 
 class DialogDR {                    // dialog drag and resize
@@ -77,6 +51,7 @@ class DialogDR {                    // dialog drag and resize
             pathToCSS:          "library/css/", // optional - path to css files
             defaultCSSFile:     "dialog.css", // optional - base class file
             addClassFiles:      "", // optional - additional class files divide by " "
+            rootPropertyPraefix:"",
             dialogMenuClass:    "dialogMenu", // must fit to the definitions in css files
             dialogBoxClass:     "dialogBox", // must fit to the definitions in css files
             dialogContentClass: "dialogContent", // must fit to the definitions in css files
@@ -116,6 +91,8 @@ class DialogDR {                    // dialog drag and resize
             boxId = "",
             tmpClasses = "";
         Object.assign( this.opt, param );
+        // set root properties
+        // end set root properties
         if( this.opt.id === "" ) {
             let el = nj().cEl( "div" );
             el.id = this.opt.dVar;
@@ -147,7 +124,6 @@ class DialogDR {                    // dialog drag and resize
                 b = {};
                 b.title = "Okay";
                 b.action = function( el ){
-                    console.log( getDVar(  this ) );
                     nj( this ).Dia().hide();
                 };
                 this.opt.buttons.push( b ); 
@@ -233,7 +209,7 @@ class DialogDR {                    // dialog drag and resize
             nj( el_ctrl ).aCh( el_add );
         }
         nj( el ).aCh( el_ctrl );
-        
+        nj( el_ctrl ).aCl( this.opt.classPraefix + "CtrlDiv");
         let box = nj().cEl( "div" );
         box.id = this.boxId + "_box";
         nj( box ).atr( "data-dVar", this.opt.dVar );
@@ -649,11 +625,6 @@ class DialogDR {                    // dialog drag and resize
                     v[0] = {};
                     v[0].title = "Okay";
                     v[0].action = function(){
-                        /*
-                        let df = getDVar( nj().els( this ) );
-                        e.log( df.split( "." )[0] );
-                        window[ df.split( "." )[0] ].opt.divVar.hide();
-                        */
                         nj( this ).Dia().hide();
                     }
                 }
