@@ -194,18 +194,18 @@ function re_trackMouseDragPlusAction(e) {
 }
 function re_dragMouseStop(e) {
     // correct terget position
-    console.log( e.target/* e.target.nextElementSibling.style.top, */ )
-    if( e.target.nextElementSibling.style.top === "" ) {
+    console.log( e.target, e.target.nextElementSibling )
+    if( typeof e.target.nextElementSibling !== "object" || e.target.nextElementSibling === null ) {
         nj().els( e.target ).style.top = "-10px";
         nj().els( e.target ).style.left = "-10px";
 
     } else {
         nj().els( e.target.nextElementSibling ).style.top = parseInt( e.target.nextElementSibling.style.top ) - 10 + "px";
         nj().els( e.target.nextElementSibling ).style.left = parseInt( e.target.nextElementSibling.style.left ) + 10 + "px";
-
     }
-    console.log( e.target );
-    //nj().els( e.target ).style.height = nj().els( e.target ).style.height + 14 + "px";
+    let tH = parseInt( nj( nj( e.target ).Dia().opt.id + '_box' ).sty("height") ) + 15 + ( 'px' );
+    let tHId = nj( e.target ).Dia().opt.id + '_box';
+    nj(tHId).sty( "height", tH );
     // end correct terget position
     (document.onmouseup = null), (document.onmousemove = null);
 }

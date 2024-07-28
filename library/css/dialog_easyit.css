@@ -8,12 +8,16 @@
 }
 /* dialog headline buttons */
 .d_CtrlDiv {
-    width: 50px;
+    width: 75px;
 }
-.d_HLClose, .d_HLMin {
+.d_HLClose, .d_HLMin, .d_HLHelp, .d_HLInfo {
     width: 10px;
     height: 10px;
     background-repeat: no-repeat;
+}
+/* crtl area help dialog */
+div[class*='_helpDiv_CtrlDiv'] {
+    width: 25px;
 }
 /* menu */
 .dialogBox > div:nth-child(2) {

@@ -1,4 +1,25 @@
-//javascript
+// test vererbung
+class ClickController {
+   constructor(element) {
+    console.log( element );
+      this.clickCount = 0;
+      element.addEventListener("click", this.handleClick.bind(this));
+   }
+   handleClick(clickEvent) {
+      this.clickCount++;               // Jetzt zeigt this auf das richtige Objekt
+    console.log( this.clickCount );
+   }
+}
+class ResizeController {
+   constructor( dia ) {
+      this.dialogVar = dia;
+      window.addEventListener("resize", this.handleResize.bind(this));
+   }
+   handleResize() {
+    if( this.dialogVar.opt.center )
+        this.dialogVar.options('center');
+   }
+}
 const PATH_TO_INFO = "info/";
 const PATH_TO_HELP = "help/";
 const PATH_TO_ICONS = "../library/icons/";
@@ -72,8 +93,7 @@ window.addEventListener( "resize", function(){
     let l = registerFunctionsResize.length;
     let i = 0;
     while( i < l ) {
-        //console.log( registerFunctionsResize[i] )
-        registerFunctionsResize[i]();
+        if( typeof registerFunctionsResize[i] !="undefined") registerFunctionsResize[i]();
         i += 1;    
     }
 });

@@ -1,0 +1,57 @@
+/* CSS */
+/* box */
+.dMacBox {
+    border: 2px silver solid;
+    border-radius: 10px;
+    box-shadow: 10px 10px 20px #0c97e2, -10px -10px 20px #ffffff;
+    background-color: white;
+}
+/* dialog headline buttons */
+.dMacCtrlDiv {
+    width: 75px;
+    display: flex !important;
+    flex-direction: row-reverse;
+}
+#dMac_headline {
+    flex-direction: row-reverse;
+    background-color: #D4D5DA;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+/* colors for min, max ..*/
+.dMacHLClose, .dMacHLMax, .dMacHLMin {
+    background-image: none;
+    background-size: 25px 25px;
+    position: relative;
+    width: 16px;
+    height: 16px;
+    top: 8px;
+    left: -6px;
+    border-radius: 18px;
+    margin-right: 5px;
+}
+.dMacHLClose {
+    background-color: #FC605C;
+}
+.dMacHLMin {
+    background-color: #FDBF41;
+    left: -26px;
+}
+.dMacHLMax {
+    background-color: #35CB4B;
+    left: 16px;
+}
+.d_HLClose, .d_HLMin, .d_HLHelp, .d_HLInfo {
+    width: 10px;
+    height: 10px;
+    background-repeat: no-repeat;
+}
+/* crtl area help dialog */
+div[class*='_helpDiv_CtrlDiv'] {
+    width: 25px;
+}
+/* menu */
+.dialogBox > div:nth-child(2) {
+    /*background: transparent linear-gradient(90deg, blue 0%, lightblue 50%, blue 100%) 0% 0% no-repeat padding-box;*/
+    height: 0px;
+}

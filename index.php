@@ -13,6 +13,7 @@
 <meta name="robots" content="index, nofollow">
 <meta name="keywords" content="hochkonfigurierbarer JavaScript-Dialog">
 <title>Dialog easyIT-Leipzig</title>
+    <link rel="stylesheet prefetch" href="library/css/main.dialog.css">
     <link rel="stylesheet prefetch" href="library/css/logo.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
@@ -20,34 +21,6 @@
 <style type="text/css">
 div>div:nth-child(2) {
     color: #005AAD;
-}
-#logoText, #logoDialog {
-    font-family: 'Univers';
-    position: relative;
-    width: 326px;
-    font-weight: bold;
-    left: 180px;
-}
-#logoText {
-    top: -176px;
-}
-#logoDialog {
-    top: -160px;
-}
-#logoText1, #logoDialog1 {
-    font-size: 60px;
-    letter-spacing: 0.5em;
-}
-#logoText2 {
-    font-size: 50px;
-    position: relative;
-    text-align: right;
-}
-#logoDialog2 {
-    font-size: 50px;
-    font-style: italic;
-    position: relative;
-    text-align: right;
 }
 </style>
 </head>
@@ -66,6 +39,11 @@ div>div:nth-child(2) {
         <div id="logoDialog2">Dialog</div>
     </div>
 </div>
+<div id="ctrlArea">
+    <button id="openDFlatModal">Dialog flach modal</button>
+    <button id="openDFlatNotModal">Dialog flach nicht modal</button>
+    <button id="openDMac">Dialog flach</button>
+</div>
 <script>
 "use strict";
 <?php echo( "var refresh_mousemove = " .$settings['logout']['refresh_mousemove'] . ";\n"); ?>
@@ -81,6 +59,9 @@ var timeoutId;
 <script src="library/javascript/DropResize.js"></script>
 <script src="library/javascript/init_dialog.js"></script>
 <script>
+    nj( "#openDFlatNotModal" ).on( "click", function() {
+        dDia.show({modal: false});
+    })
     init( 'dDia' );
 </script>
 </body>

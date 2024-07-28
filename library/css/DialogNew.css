@@ -1,48 +1,19 @@
-#dialogMinimizeArea {
-    position: fixed;
-    bottom: 20px;
-    height: 0px;
-}
-.dummyRes {
-    background-image: url(icons/cResizer.png);
-    background-repeat: no-repeat;
-    width: 15px;
-    height: 15px;
-    position: absolute;
-    background-color: transparent;
-    cursor: se-resize;
-    bottom: -5px;
-    right: -5px;
-}
 /*
 .dialogBox > div:first-child {
     display: flex;
     cursor: move;
 }
-*/
 .dialogBox > div:first-child > div:nth-child(2) {
     flex: 1;
     white-space: nowrap;
     overflow: hidden;
 }
+*/
 /*
 .dialogBox > div:first-child > div {
     display: inline-block;
 }
 */
-/* dialog */
-.dialogBox > div:nth-child(3) {
-    padding: 3px;
-    overflow-y: auto;
-}
-/* footer */
-.dialogBox > div:nth-child(4) {
-    width: 100%;
-    text-align: end;
-}
-.dialogBox > div:nth-child(4) > button {
-        margin: 0.5em 0.5em 0.5em 0.5em;
-}
 /* wrapper */
 .dialogWrapper {
     background-color: silver;

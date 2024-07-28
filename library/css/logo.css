@@ -4,6 +4,36 @@
       format("woff2"),
     url("fonts/UniversBold.woff")
       format("woff");
-  font-weight: normal;
+  font-weight: bold;
   font-style: normal;
 }
+/* logo */
+#logoText, #logoDialog {
+    font-family: 'Univers';
+    position: relative;
+    width: 326px;
+    font-weight: bold;
+    left: 180px;
+}
+#logoText {
+    top: -176px;
+}
+#logoDialog {
+    top: -160px;
+}
+#logoText1, #logoDialog1 {
+    font-size: 60px;
+    letter-spacing: 0.5em;
+}
+#logoText2 {
+    font-size: 50px;
+    position: relative;
+    text-align: right;
+}
+#logoDialog2 {
+    font-size: 50px;
+    font-style: italic;
+    position: relative;
+    text-align: right;
+}
+/* logo end */

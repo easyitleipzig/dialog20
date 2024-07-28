@@ -3,6 +3,8 @@
     display: flex;
 }
 .dialogContent {
+    padding: 3px;
+    overflow-y: auto;
     width: 95%;
 }
 .dialogBox > div:first-child>div:nth-child(2) {
@@ -24,9 +26,37 @@
 .dialogMenu {
     height: 0px;
 }
+/* dialog icon */
 .dialogBox > div:first-child > div:first-child {
     padding-right: 3px;
 }
+/* dialog title */
+.dialogBox > div:first-child > div:nth-child(2) {
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+}
+/* footer */
+.dialogBox > div:nth-child(4) {
+    width: 100%;
+    text-align: end;
+}
+.dialogBox > div:nth-child(4) > button {
+        margin: 0.5em 0.5em 0.5em 0.5em;
+}
+/* dialog resizer */
+.dummyRes {
+    background-image: url(icons/cResizer.png);
+    background-repeat: no-repeat;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    background-color: transparent;
+    cursor: se-resize;
+    bottom: -5px;
+    right: -5px;
+}
+/* end format elements */
 .boxShow {
     display: block;
 }
@@ -61,6 +91,9 @@
 }
 .cbMinimize {
     background-image: url(icons/cMinimize.png);
+}
+.cbInfo {
+    background-image: url(icons/cInfo.png);
 }
 
 @media screen AND (min-width: 360px ) {
